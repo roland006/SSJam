@@ -512,6 +512,7 @@ MonoBehaviour:
   destroy: 0
   log: {fileID: 0}
   objectT: {fileID: 0}
+  playerS: {fileID: 0}
 --- !u!114 &114740362844000140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,6 +532,7 @@ MonoBehaviour:
   destroy: 0
   log: {fileID: 0}
   objectT: {fileID: 0}
+  playerS: {fileID: 0}
 --- !u!114 &114828761912169936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,6 +552,7 @@ MonoBehaviour:
   destroy: 0
   log: {fileID: 0}
   objectT: {fileID: 0}
+  playerS: {fileID: 0}
 --- !u!114 &114832994642989144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,7 +572,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1939873254670888}
   objectPrefab:
   - {fileID: 0}
-  - {fileID: 1021649600700512, guid: f872b1eba1bd93e40a88ed2e75583030, type: 2}
+  - {fileID: 0}
 --- !u!212 &212305784981513718
 SpriteRenderer:
   m_ObjectHideFlags: 1

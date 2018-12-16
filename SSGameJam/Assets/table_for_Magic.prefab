@@ -170,6 +170,7 @@ MonoBehaviour:
   destroy: 0
   log: {fileID: 0}
   objectT: {fileID: 0}
+  playerS: {fileID: 0}
 --- !u!212 &212382380624269818
 SpriteRenderer:
   m_ObjectHideFlags: 1

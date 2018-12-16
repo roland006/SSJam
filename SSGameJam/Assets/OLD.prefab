@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 95591893838888170}
   - component: {fileID: 114442708039065860}
   m_Layer: 0
-  m_Name: machine 1
+  m_Name: OLD
   m_TagString: machine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,10 +306,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 1303516259993864}
   spawnPosition: {x: 0, y: 0, z: 0}
   objectPrefab:
-  - {fileID: 1689853181910510, guid: 2fefcea735fdb804c8d9214222d17c37, type: 2}
-  - {fileID: 1512775360370028, guid: 526437fe4f4a4934b9544691a7e4010a, type: 2}
-  - {fileID: 1165814073722926, guid: 80577a9036f86044c9ee1a7ce99032be, type: 2}
-  - {fileID: 1021649600700512, guid: f872b1eba1bd93e40a88ed2e75583030, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   i: 0
   playerCol: {fileID: 0}
   timer: 0
