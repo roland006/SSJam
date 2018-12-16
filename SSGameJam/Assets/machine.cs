@@ -30,44 +30,28 @@ public class machine : MonoBehaviour
         
         if (Input.GetKeyDown("space") && col && !work)
         {
-            if (col != null)
+            if (nameForObject[0] == col.GetComponent<ObjectS>().objectName)
             {
-                if (nameForObject[0] == col.GetComponent<ObjectS>().objectName)
-                {
-                    playerCol.GetComponent<take_an_object>().isCol = false;
-                    playerCol.GetComponent<take_an_object>().col = null;
-                    playerCol.GetComponent<take_an_object>().hold = false;
-                    id = 0;
-                    active = true;
-                    Destroy(col);
-                    work = true;
-                }
+                id = 0;
+                active = true;
+                Destroy(col);
+                work = true;
+                Debug.Log("nameForObject[0]");
             }
-            if (col != null)
+            if (nameForObject[1] == col.GetComponent<ObjectS>().objectName)
             {
-                if (nameForObject[1] == col.GetComponent<ObjectS>().objectName)
-                {
-                    playerCol.GetComponent<take_an_object>().isCol = false;
-                    playerCol.GetComponent<take_an_object>().col = null;
-                    playerCol.GetComponent<take_an_object>().hold = false;
-                    id = 1;
-                    active = true;
-                    Destroy(col);
-                    work = true;
-                }
+                id = 1;
+                active = true;
+                Destroy(col);
+                work = true;
             }
-            if (col != null)
+            if (nameForObject[2] == col.GetComponent<ObjectS>().objectName)
             {
-                if (nameForObject[2] == col.GetComponent<ObjectS>().objectName)
-                {
-                    playerCol.GetComponent<take_an_object>().isCol = false;
-                    playerCol.GetComponent<take_an_object>().col = null;
-                    playerCol.GetComponent<take_an_object>().hold = false;
-                    id = 2;
-                    active = true;
-                    Destroy(col);
-                    work = true;
-                }
+                id = 2;
+                active = true;
+                Destroy(col);
+                work = true;
+                Debug.Log("go");
             }
 
         }
