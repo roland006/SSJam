@@ -7,6 +7,9 @@ public class TableS : MonoBehaviour {
     public GameObject playerCol;
     public Transform point;
     public bool stand;
+    public int id;
+    public bool i;
+    public GameObject log;
 
     // Use this for initialization
     void Start () {
@@ -26,9 +29,12 @@ public class TableS : MonoBehaviour {
             {
                 if (!stand)
                 {
+                    id = collision.gameObject.GetComponent<ObjectS>().objectName;
                     collision.gameObject.transform.position = point.position;
                     collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     stand = true;
+                    if (i)
+                        log.GetComponent<QuestLog>().UpdateLog(id);
                 }
             }
         }
@@ -37,8 +43,11 @@ public class TableS : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Object")
         {
+            id = 0;
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             stand = false;
         }
     }
+
+
 }

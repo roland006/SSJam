@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212323709082254390}
   - component: {fileID: 58277536371827868}
   - component: {fileID: 50992557113193886}
+  - component: {fileID: 114164980169418520}
   m_Layer: 0
   m_Name: 3
   m_TagString: Object
@@ -54,7 +55,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -77,6 +78,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114164980169418520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964978447350972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c159001c78808b141b50a1560daec1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: 3
 --- !u!212 &212323709082254390
 SpriteRenderer:
   m_ObjectHideFlags: 1

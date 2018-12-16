@@ -306,8 +306,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\machine.cs" />
+    <Compile Include="Assets\MagicCraft.cs" />
     <Compile Include="Assets\MovePanel.cs" />
+    <Compile Include="Assets\ObjectS.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\QuestLog.cs" />
     <Compile Include="Assets\spawn.cs" />
     <Compile Include="Assets\TableS.cs" />
     <Compile Include="Assets\take_an_object.cs" />
