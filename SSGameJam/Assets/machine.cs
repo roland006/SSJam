@@ -18,10 +18,15 @@ public class machine : MonoBehaviour
     public bool i;
     public GameObject playerCol;
 
+    float constT;
+    public int timer;
+
     // Use this for initialization
     void Start()
     {
+        constT = t;
         spawnPosition = spawnPoint.transform.position;
+        
         
     }
 
@@ -119,6 +124,29 @@ public class machine : MonoBehaviour
                     t = 5;
                 }
             }
+        }
+        
+
+            ////////
+        if (t <= constT * 0.2f)
+        {
+            timer = 0;
+        }
+        else if (t > constT * 0.2f && t <= constT * 0.4f)
+        {
+            timer = 1;
+        }
+        else if (t > constT * 0.4f && t <= constT * 0.6f)
+        {
+            timer = 2;
+        }
+        else if (t > constT * 0.6f && t <= constT * 0.8f)
+        {
+            timer = 3;
+        }
+        else if (t > constT * 0.8f && t <= constT)
+        {
+            timer = 4;
         }
     }
 
