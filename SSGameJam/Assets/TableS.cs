@@ -9,7 +9,9 @@ public class TableS : MonoBehaviour {
     public bool stand;
     public int id;
     public bool i;
+    public bool destroy;
     public GameObject log;
+    public GameObject objectT;
 
     // Use this for initialization
     void Start () {
@@ -18,8 +20,13 @@ public class TableS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (destroy)
+        {
+            Destroy(objectT);
+            Debug.Log("1234567789");
+            destroy = false;
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -29,12 +36,16 @@ public class TableS : MonoBehaviour {
             {
                 if (!stand)
                 {
+                    objectT = collision.gameObject;
                     id = collision.gameObject.GetComponent<ObjectS>().objectName;
                     collision.gameObject.transform.position = point.position;
+                    collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
                     collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     stand = true;
                     if (i)
+                    {
                         log.GetComponent<QuestLog>().UpdateLog(id);
+                    }
                 }
             }
         }
@@ -44,6 +55,7 @@ public class TableS : MonoBehaviour {
         if (collision.gameObject.tag == "Object")
         {
             id = 0;
+            objectT = null;
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             stand = false;
         }

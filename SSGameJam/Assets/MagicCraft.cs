@@ -12,10 +12,13 @@ public class MagicCraft : MonoBehaviour {
     public GameObject table1;
     public GameObject table2;
     public GameObject table3;
+    public Vector3 spawnPosition;
+    public GameObject spawnPoint;
+    public GameObject[] objectPrefab;
 
     // Use this for initialization
     void Start () {
-
+        spawnPosition = spawnPoint.transform.position;
         //Создаю массив с айтемами, заполняю его уникальными номерами для дальнейшей идентификации предметов в крафте
         int ResTypes = 3; //Кол-во возможных ресурсов (Дерево, Ткань, Железо)
         int TierTypes = 4; //Количество возможных тиров (полено, брусок, конечность, мусор)
@@ -41,16 +44,19 @@ public class MagicCraft : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (table1.GetComponent<TableS>().id != 0)
+        if (table1.GetComponent<TableS>().id > -1)
             table[0] = table1.GetComponent<TableS>().id;
-        if (table2.GetComponent<TableS>().id != 0)
-            table[1] = table1.GetComponent<TableS>().id;
-        if (table3.GetComponent<TableS>().id != 0)
-            table[2] = table1.GetComponent<TableS>().id;
+        if (table2.GetComponent<TableS>().id > -1)
+            table[1] = table2.GetComponent<TableS>().id;
+        if (table3.GetComponent<TableS>().id > -1)
+            table[2] = table3.GetComponent<TableS>().id;
 
         if (table[0] != 0 && table[1] != 0 && table[2] != 0)
         {
             Magic();
+            table1.GetComponent<TableS>().destroy = true;
+            table2.GetComponent<TableS>().destroy = true;
+            table3.GetComponent<TableS>().destroy = true;
         }
     }
 
@@ -65,6 +71,7 @@ public class MagicCraft : MonoBehaviour {
             if (((IList<int>)codes).Contains(4))//бревно
             {
                 Debug.Log("Есть бревно");
+              
                 //конечность
                 if (((IList<int>)codes).Contains(7)) //колесо
                 {
@@ -86,6 +93,8 @@ public class MagicCraft : MonoBehaviour {
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
+                        table[0] = 0; table[1] = 0; table[2] = 0;
+                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
                     }
                 }
                 //колесо
@@ -108,18 +117,24 @@ public class MagicCraft : MonoBehaviour {
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
+                        table[0] = 0; table[1] = 0; table[2] = 0;
+                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
                     }
                 }
-                if (table[0] == table[1] && table[0] == table[2])
-                {
-                    Debug.Log("Получились кубики");
-
-                }
-                else
-                {
-                    Debug.Log("Всё хуйня, давай по новой");
-                }
+            if (table[0] == table[1] && table[0] == table[2])
+            {
+                Debug.Log("Есть бревно");
+            Debug.Log("Получились кубики");
+            table[0] = 0; table[1] = 0; table[2] = 0;
+            Instantiate(objectPrefab[0], spawnPosition, Quaternion.identity);
             }
+            else
+            {
+                Debug.Log("Всё хуйня, давай по новой");
+                table[0] = 0; table[1] = 0; table[2] = 0;
+                Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
+            }
+        }
             else if (((IList<int>)codes).Contains(6))//колесо
             {
                 Debug.Log("Нет бревна, но есть колесо");
@@ -137,16 +152,22 @@ public class MagicCraft : MonoBehaviour {
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
+                        table[0] = 0; table[1] = 0; table[2] = 0;
+                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
                     }
                 }
                 else
                 {
                     Debug.Log("Всё хуйня, давай по новой");
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
                 }
             }
             else
             {
                 Debug.Log("Всё хуйня, давай по новой");
+                table[0] = 0; table[1] = 0; table[2] = 0;
+                Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
             }
 
         

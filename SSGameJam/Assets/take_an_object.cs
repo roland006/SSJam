@@ -8,6 +8,7 @@ public class take_an_object : MonoBehaviour
     public GameObject col;
     public bool hold;
     private Rigidbody2D rb;
+    public bool isCol;
 
     // Use this for initialization
     void Start()
@@ -42,6 +43,7 @@ public class take_an_object : MonoBehaviour
         {
             if (collision.gameObject.tag == "Object")
             {
+                isCol = false;
                 col = null;
             }
         }
@@ -53,6 +55,7 @@ public class take_an_object : MonoBehaviour
         {
             if (collision.gameObject.tag == "Object")
             {
+                isCol = true;
                 col = collision.gameObject;
                 rb = col.GetComponent<Rigidbody2D>();
             }
@@ -66,6 +69,7 @@ public class take_an_object : MonoBehaviour
         {
             if (collision.gameObject.tag == "Object")
             {
+                isCol = true;
                 col = collision.gameObject;
                 rb = col.GetComponent<Rigidbody2D>();
             }

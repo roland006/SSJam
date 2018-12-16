@@ -306,6 +306,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ColS.cs" />
     <Compile Include="Assets\machine.cs" />
     <Compile Include="Assets\MagicCraft.cs" />
     <Compile Include="Assets\MovePanel.cs" />

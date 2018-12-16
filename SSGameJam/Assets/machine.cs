@@ -16,11 +16,13 @@ public class machine : MonoBehaviour
     private int id;
     private bool work;
     public bool i;
+    public GameObject playerCol;
 
     // Use this for initialization
     void Start()
     {
         spawnPosition = spawnPoint.transform.position;
+        
     }
 
     void Update()
@@ -57,7 +59,7 @@ public class machine : MonoBehaviour
         {
             t -= Time.deltaTime;
             animator.SetBool("active", true);
-            if (t < 4.8)
+            if (t < 4.8 && i && playerCol.GetComponent<take_an_object>().isCol == false)
             {
                 if (Input.GetKeyDown("space"))
                 {

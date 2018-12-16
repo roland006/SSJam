@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58095635987561744}
   - component: {fileID: 50844447397849924}
   - component: {fileID: 114413173899399148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 4
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1512775360370028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8343868, y: -2.2821717, z: 0}
+  m_LocalPosition: {x: -3.9, y: 1.9, z: 0}
   m_LocalScale: {x: 0.5561464, y: 0.56259423, z: 0.12963}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1512775360370028}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 69f0d53886f7b6d41bb4999317e1bd01, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
