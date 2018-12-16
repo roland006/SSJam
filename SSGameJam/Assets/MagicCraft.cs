@@ -44,11 +44,11 @@ public class MagicCraft : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (table1.GetComponent<TableS>().id > -1)
+        //if (table1.GetComponent<TableS>().id != 0)
             table[0] = table1.GetComponent<TableS>().id;
-        if (table2.GetComponent<TableS>().id > -1)
+        //if (table2.GetComponent<TableS>().id != 0)
             table[1] = table2.GetComponent<TableS>().id;
-        if (table3.GetComponent<TableS>().id > -1)
+        //if (table3.GetComponent<TableS>().id != 0)
             table[2] = table3.GetComponent<TableS>().id;
 
         if (table[0] != 0 && table[1] != 0 && table[2] != 0)
@@ -82,20 +82,27 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Есть конечность+бревно+платье");
 
                         Debug.Log("Получилась кукла");
-                    }
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[0], spawnPosition, Quaternion.identity);
+                    return;
+                }
 
                     if (((IList<int>)codes).Contains(8)) //узоры
                     {
                         Debug.Log("Есть конечность+бревно+узоры");
 
                         Debug.Log("Получился солдатик");
-                    }
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
+                    return;
+                }
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
-                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
-                    }
+                        Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+                    return;
+                }
                 }
                 //колесо
                 if (((IList<int>)codes).Contains(6))//колесо
@@ -106,33 +113,42 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Есть бревно+колесо+узоры");
 
                         Debug.Log("Получилась машинка");
-                    }
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[2], spawnPosition, Quaternion.identity);
+                    return;
+                }
 
                     if (((IList<int>)codes).Contains(9))//микросхема
                     {
                         Debug.Log("Есть бревно+колесо+микросхема");
 
                         Debug.Log("Получился вертолётик");
-                    }
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[3], spawnPosition, Quaternion.identity);
+                    return;
+                }
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
-                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
-                    }
+                        Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+                    return;
+                }
                 }
             if (table[0] == table[1] && table[0] == table[2])
             {
                 Debug.Log("Есть бревно");
             Debug.Log("Получились кубики");
             table[0] = 0; table[1] = 0; table[2] = 0;
-            Instantiate(objectPrefab[0], spawnPosition, Quaternion.identity);
+            Instantiate(objectPrefab[4], spawnPosition, Quaternion.identity);
+                return;
             }
             else
             {
                 Debug.Log("Всё хуйня, давай по новой");
                 table[0] = 0; table[1] = 0; table[2] = 0;
-                Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
+                Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+                return;
             }
         }
             else if (((IList<int>)codes).Contains(6))//колесо
@@ -148,26 +164,32 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Есть колесо+микросхема");
 
                         Debug.Log("Получился робот");
-                    }
+                    table[0] = 0; table[1] = 0; table[2] = 0;
+                    Instantiate(objectPrefab[5], spawnPosition, Quaternion.identity);
+                    return;
+                }
                     else
                     {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
-                        Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
-                    }
+                        Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+                    return;
+                }
                 }
                 else
                 {
                     Debug.Log("Всё хуйня, давай по новой");
                     table[0] = 0; table[1] = 0; table[2] = 0;
-                    Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
-                }
+                    Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+                return;
+            }
             }
             else
             {
                 Debug.Log("Всё хуйня, давай по новой");
                 table[0] = 0; table[1] = 0; table[2] = 0;
-                Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
+                Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
+            return;
             }
 
         
