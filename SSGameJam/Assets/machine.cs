@@ -30,28 +30,44 @@ public class machine : MonoBehaviour
         
         if (Input.GetKeyDown("space") && col && !work)
         {
-            if (nameForObject[0] == col.GetComponent<ObjectS>().objectName)
+            if (col != null)
             {
-                id = 0;
-                active = true;
-                Destroy(col);
-                work = true;
-                Debug.Log("nameForObject[0]");
+                if (nameForObject[0] == col.GetComponent<ObjectS>().objectName)
+                {
+                    playerCol.GetComponent<take_an_object>().isCol = false;
+                    playerCol.GetComponent<take_an_object>().col = null;
+                    playerCol.GetComponent<take_an_object>().hold = false;
+                    id = 0;
+                    active = true;
+                    Destroy(col);
+                    work = true;
+                }
             }
-            if (nameForObject[1] == col.GetComponent<ObjectS>().objectName)
+            if (col != null)
             {
-                id = 1;
-                active = true;
-                Destroy(col);
-                work = true;
+                if (nameForObject[1] == col.GetComponent<ObjectS>().objectName)
+                {
+                    playerCol.GetComponent<take_an_object>().isCol = false;
+                    playerCol.GetComponent<take_an_object>().col = null;
+                    playerCol.GetComponent<take_an_object>().hold = false;
+                    id = 1;
+                    active = true;
+                    Destroy(col);
+                    work = true;
+                }
             }
-            if (nameForObject[2] == col.GetComponent<ObjectS>().objectName)
+            if (col != null)
             {
-                id = 2;
-                active = true;
-                Destroy(col);
-                work = true;
-                Debug.Log("go");
+                if (nameForObject[2] == col.GetComponent<ObjectS>().objectName)
+                {
+                    playerCol.GetComponent<take_an_object>().isCol = false;
+                    playerCol.GetComponent<take_an_object>().col = null;
+                    playerCol.GetComponent<take_an_object>().hold = false;
+                    id = 2;
+                    active = true;
+                    Destroy(col);
+                    work = true;
+                }
             }
 
         }
