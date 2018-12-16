@@ -12,6 +12,7 @@ public class TableS : MonoBehaviour {
     public bool destroy;
     public GameObject log;
     public GameObject objectT;
+    public GameObject playerS;
 
     // Use this for initialization
     void Start () {
@@ -23,7 +24,7 @@ public class TableS : MonoBehaviour {
         if (destroy)
         {
             Destroy(objectT);
-            Debug.Log("1234567789");
+            Debug.Log("destroy object");
             destroy = false;
         }
     }
@@ -45,6 +46,7 @@ public class TableS : MonoBehaviour {
                     if (i)
                     {
                         log.GetComponent<QuestLog>().UpdateLog(id);
+                        destroy = true;
                     }
                 }
             }
