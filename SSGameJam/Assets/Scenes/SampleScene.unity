@@ -7500,6 +7500,11 @@ Prefab:
       propertyPath: log
       value: 
       objectReference: {fileID: 975401341}
+    - target: {fileID: 114422797285571988, guid: 221d6316039cc424cb3c61e99d3b586b,
+        type: 2}
+      propertyPath: stand
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 221d6316039cc424cb3c61e99d3b586b, type: 2}
   m_IsPrefabAsset: 0
