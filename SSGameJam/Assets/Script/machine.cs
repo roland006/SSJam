@@ -20,15 +20,14 @@ public class machine : MonoBehaviour
 
     float constT;
     public int timer;
+    public int Instate;
     SpriteRenderer cloud_SpriteRenderer;
     public GameObject cloud;
-    //float ypos, xpos;
+   
 
     // Use this for initialization
     void Start()
     {
-        // ypos = cloud.transform.position.y;
-        // xpos = cloud.transform.position.x;
         cloud_SpriteRenderer = cloud.GetComponent<SpriteRenderer>(); 
         constT = t;
         spawnPosition = spawnPoint.transform.position;
@@ -49,6 +48,9 @@ public class machine : MonoBehaviour
                     playerCol.GetComponent<take_an_object>().col = null;
                     playerCol.GetComponent<take_an_object>().hold = false;
                     id = 0;
+                    //
+                    Instate = nameForObject[0];
+
                     active = true;
                     Destroy(col);
                     work = true;
@@ -62,6 +64,8 @@ public class machine : MonoBehaviour
                     playerCol.GetComponent<take_an_object>().col = null;
                     playerCol.GetComponent<take_an_object>().hold = false;
                     id = 1;
+                    //
+                    Instate = nameForObject[1];
                     active = true;
                     Destroy(col);
                     work = true;
@@ -75,6 +79,8 @@ public class machine : MonoBehaviour
                     playerCol.GetComponent<take_an_object>().col = null;
                     playerCol.GetComponent<take_an_object>().hold = false;
                     id = 2;
+                    //
+                    Instate = nameForObject[2];
                     active = true;
                     Destroy(col);
                     work = true;
@@ -94,6 +100,7 @@ public class machine : MonoBehaviour
                     active = false;
                     Instantiate(objectPrefab[id], spawnPosition, Quaternion.identity);
                     t = 5;
+                    Instate = 0;
                     work = false;
                     Debug.Log("stop1");
                 }
@@ -104,7 +111,9 @@ public class machine : MonoBehaviour
                 active = false;
                 Instantiate(objectPrefab[id], spawnPosition, Quaternion.identity);
                 t = 5;
+                Instate = 0;
                 work = false;
+                Instate = 0;
                 Debug.Log("stop2");
             }
             if (t < 0)
@@ -112,6 +121,7 @@ public class machine : MonoBehaviour
                 
                 if (id == 2)
                 {
+                    Instate = nameForObject[id];
                     id = 3;
                     Debug.Log("id = 3");
                     t = 5;
@@ -120,12 +130,14 @@ public class machine : MonoBehaviour
                 if (id == 1)
                 {
                     id = 2;
+                    Instate = nameForObject[id];
                     Debug.Log("id = 2");
                     t = 5;
                 }
                 if (id == 0)
                 {
                     id = 1;
+                    Instate = nameForObject[id];
                     Debug.Log("id = 1");
                     t = 5;
                 }
