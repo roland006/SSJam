@@ -88,7 +88,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Получилась кукла");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[0], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
 
@@ -99,7 +99,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Получился солдатик");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[1], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                     else
@@ -107,7 +107,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
                         Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                 }
@@ -122,7 +122,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Получилась машинка");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[2], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
 
@@ -133,7 +133,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Получился вертолётик");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[3], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                     else
@@ -141,7 +141,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
                         Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                 }
@@ -151,7 +151,7 @@ public class MagicCraft : MonoBehaviour {
             Debug.Log("Получились кубики");
             table[0] = 0; table[1] = 0; table[2] = 0;
             Instantiate(objectPrefab[4], spawnPosition, Quaternion.identity);
-                audioS.GetComponent<AudioManager>().Play("Magic");
+                aM.GetComponent<AudioManager>().Play("Magic");
                 return;
             }
             else
@@ -159,7 +159,7 @@ public class MagicCraft : MonoBehaviour {
                 Debug.Log("Всё хуйня, давай по новой");
                 table[0] = 0; table[1] = 0; table[2] = 0;
                 Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                audioS.GetComponent<AudioManager>().Play("Magic");
+                aM.GetComponent<AudioManager>().Play("Magic");
                 return;
             }
         }
@@ -178,7 +178,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Получился робот");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[5], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                     else
@@ -186,7 +186,7 @@ public class MagicCraft : MonoBehaviour {
                         Debug.Log("Всё хуйня, давай по новой");
                         table[0] = 0; table[1] = 0; table[2] = 0;
                         Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                    audioS.GetComponent<AudioManager>().Play("Magic");
+                    aM.GetComponent<AudioManager>().Play("Magic");
                     return;
                 }
                 }
@@ -195,7 +195,7 @@ public class MagicCraft : MonoBehaviour {
                     Debug.Log("Всё хуйня, давай по новой");
                     table[0] = 0; table[1] = 0; table[2] = 0;
                     Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                audioS.GetComponent<AudioManager>().Play("Magic");
+                aM.GetComponent<AudioManager>().Play("Magic");
                 return;
             }
             }
@@ -204,7 +204,7 @@ public class MagicCraft : MonoBehaviour {
                 Debug.Log("Всё хуйня, давай по новой");
                 table[0] = 0; table[1] = 0; table[2] = 0;
                 Instantiate(objectPrefab[6], spawnPosition, Quaternion.identity);
-                audioS.GetComponent<AudioManager>().Play("Magic");
+                aM.GetComponent<AudioManager>().Play("Magic");
             return;
             }
 
