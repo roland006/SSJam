@@ -9,6 +9,7 @@ public class TableS : MonoBehaviour {
     public bool stand;
     public int id;
     public bool i;
+    public bool a;
     public bool destroy;
     public GameObject log;
     public GameObject objectT;
@@ -49,6 +50,10 @@ public class TableS : MonoBehaviour {
                         log.GetComponent<QuestLog>().UpdateLog(id);
                         destroy = true;
                         SpawnPriz.GetComponent<SpawnPriz>().SpawnP();
+                    }
+                    if (a)
+                    {
+                        destroy = true;
                     }
                 }
             }

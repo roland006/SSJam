@@ -307,7 +307,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\F\CreditsMenuF.cs" />
+    <Compile Include="Assets\F\EndSceneF.cs" />
     <Compile Include="Assets\F\MainMenuF.cs" />
+    <Compile Include="Assets\F\PauseMenuF.cs" />
+    <Compile Include="Assets\New Folder\AudioManager.cs" />
+    <Compile Include="Assets\New Folder\Sound.cs" />
+    <Compile Include="Assets\Script\Clock.cs" />
     <Compile Include="Assets\Script\ColS.cs" />
     <Compile Include="Assets\Script\colSBox.cs" />
     <Compile Include="Assets\Script\machine.cs" />
