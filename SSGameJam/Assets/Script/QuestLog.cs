@@ -8,7 +8,7 @@ public class QuestLog : MonoBehaviour {
     public int FailurePoint; //количество очков за неправильный подарок
     int points;
     int [] log = new int [3];
-    string[] name = new string[3];
+    
     public GameObject TextBox;
     public Animator[] anim = new Animator[3];
 
@@ -21,16 +21,13 @@ public class QuestLog : MonoBehaviour {
         for (int i = 0; i < 3; i++)
         {
             Log_SpriteRenderer[i] = LogSprite[i].GetComponent<SpriteRenderer>();
-            
         }
-
         points = 0;
         //заряжаем в квест лог рандомные переменные (от 0 до 5) где переменная - код требуемой игрушки
         log[0] = Random.Range(100, 105);
         log[1] = Random.Range(100, 105);
         log[2] = Random.Range(100, 105);
         Refresh(log[0],log[1],log[2]);
-        
     }
 
     public void Refresh(int x, int y, int z)
@@ -40,37 +37,40 @@ public class QuestLog : MonoBehaviour {
             anim[i].SetInteger("Toy", log[i] - 100);
             
         }
-
     }
 
     public void UpdateLog(int complete)
     {
         //выполняем этот метод после того как подарок (complete) оказался в мешке. Если подарок совпадает с квестлогом log[], то мы начисляем очки, если нет, то ничего не происходит.
-        int count = 0;
+       
         for (int i = 0; i < 3; i++)
         {
-            if (log[i] == complete)
+            if (log[i] == complete && complete > 90)
             {
                 log[i] = Random.Range(100, 105);
                 //тут надо проиграть анимацию замены иконки со старой на новую
 
                 Debug.Log("Молодец, ты сделал" + complete + "Получи новую задачу:" + log[i]); //начисялем очки
                 points = points + SuccessPoint;
-                //i = 3;
+                i = 3;
                 Refresh(log[0], log[1], log[2]);
                 TextBox.GetComponent<TextMesh>().text = ""+points;
-                return;
+                
             }
-            count++;
+            else if( i == 2 && complete > 90)
+            {
+                Debug.Log("Сорян, ты сделал не то что требовалось, соси бибу, или что там у тебя..."); // хз чё делаем
+                points = points + FailurePoint;
+                i = 3;
+                TextBox.GetComponent<TextMesh>().text = "" + points;
+            }
+            else if (complete <90)
+            {
+                Debug.Log("Ты нафига детям это отправляешь? ты что больной?"); // хз чё делаем
+                i = 3; 
+            }
+            
         }
-        if (count == 3)
-        {
-            Debug.Log("Сорян, ты сделал не то что требовалось, соси бибу, или что там у тебя..."); // хз чё делаем
-            points = points + FailurePoint;
-            count = 0;
-        }
-       
-
     }
 
     // Update is called once per frame
