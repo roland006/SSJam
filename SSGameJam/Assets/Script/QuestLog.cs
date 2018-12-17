@@ -10,10 +10,20 @@ public class QuestLog : MonoBehaviour {
     int [] log = new int [3];
     string[] name = new string[3];
     public GameObject TextBox;
+    public Animator[] anim = new Animator[3];
+
+    SpriteRenderer[] Log_SpriteRenderer = new SpriteRenderer[3];   
+    public GameObject[] LogSprite = new GameObject[3];
 
     // Use this for initialization
     void Start()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            Log_SpriteRenderer[i] = LogSprite[i].GetComponent<SpriteRenderer>();
+            
+        }
+
         points = 0;
         //заряжаем в квест лог рандомные переменные (от 0 до 5) где переменная - код требуемой игрушки
         log[0] = Random.Range(100, 105);
@@ -27,35 +37,37 @@ public class QuestLog : MonoBehaviour {
     {
         for (int i = 0; i < 3; i++)
         {
-            if (log[i] == 100)
-            {
-                
-                name[i] = "кукла";
-            }
-            else if (log[i] == 101)
-            {
-                name[i] = "солдатик";
-            }
-            else if (log[i] == 102)
-            {
-                name[i] = "машинка";
-            }
-            else if (log[i] == 103)
-            {
-                name[i] = "вертолетик";
-            }
-            else if (log[i] == 104)
-            {
-                name[i] = "кубики";
-            }
-            else
-            {
-                name[i] = "робот";
-            }
+            anim[i].SetInteger("Toy", log[i] - 100);
+
+            //if (log[i] == 100)
+            //{
+            //    anim[i].SetInteger("Toy", log[i]-100);
+            //    name[i] = "кукла";
+            //}
+            //else if (log[i] == 101)
+            //{
+            //    name[i] = "солдатик";
+            //}
+            //else if (log[i] == 102)
+            //{
+            //    name[i] = "машинка";
+            //}
+            //else if (log[i] == 103)
+            //{
+            //    name[i] = "вертолетик";
+            //}
+            //else if (log[i] == 104)
+            //{
+            //    name[i] = "кубики";
+            //}
+            //else
+            //{
+            //    name[i] = "робот";
+            //}
         }
 
-        GameObject TextBox = gameObject.transform.Find("TextBlock").gameObject;
-        TextBox.GetComponent<TextMesh>().text = " " + name[0] + "; " + name[1] + "; " + name[2];
+        //GameObject TextBox = gameObject.transform.Find("TextBlock").gameObject;
+        //TextBox.GetComponent<TextMesh>().text = " " + name[0] + "; " + name[1] + "; " + name[2];
         //Debug.Log(log[0] + " " + log[1] + " " + log[2]);
     }
 
