@@ -56,7 +56,7 @@ public class QuestLog : MonoBehaviour {
 
                 Debug.Log("Молодец, ты сделал" + complete + "Получи новую задачу:" + log[i]); //начисялем очки
                 points = points + SuccessPoint;
-                i = 3;
+                //i = 3;
                 Refresh(log[0], log[1], log[2]);
                 TextBox.GetComponent<TextMesh>().text = ""+points;
                 return;
@@ -67,6 +67,7 @@ public class QuestLog : MonoBehaviour {
         {
             Debug.Log("Сорян, ты сделал не то что требовалось, соси бибу, или что там у тебя..."); // хз чё делаем
             points = points + FailurePoint;
+            count = 0;
         }
        
 
