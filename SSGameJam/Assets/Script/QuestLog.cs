@@ -17,11 +17,15 @@ public class QuestLog : MonoBehaviour {
     public GameObject[] LogSprite = new GameObject[3];
 
     public float t = 10;
+    public GameObject audioM;
+    public AudioManager aM;
 
 
     // Use this for initialization
     void Start()
     {
+        audioM = GameObject.FindGameObjectWithTag("AudioM");
+        aM = audioM.GetComponent<AudioManager>();
         for (int i = 0; i < 3; i++)
         {
             Log_SpriteRenderer[i] = LogSprite[i].GetComponent<SpriteRenderer>();
@@ -62,6 +66,7 @@ public class QuestLog : MonoBehaviour {
                 TextBox.GetComponent<TextMesh>().text = ""+points;
                 t = -1;
                 suckAss.SetInteger("Finger", 1);
+                aM.GetComponent<AudioManager>().Play("Success");
                 t = 2;
             }
             else if( i == 2 && complete > 90)
@@ -73,14 +78,17 @@ public class QuestLog : MonoBehaviour {
                 TextBox.GetComponent<TextMesh>().text = "" + points;
                 t = -1;
                 suckAss.SetInteger("Finger", 2);
+                aM.GetComponent<AudioManager>().Play("Fail");
                 t = 2;
             }
             else if (complete <90)
             {
+                points = points - 1;
                 Debug.Log("Ты нафига детям это отправляешь? ты что больной?"); // хз чё делаем
                 i = 3;
                 t = -1;
                 suckAss.SetInteger("Finger", 2);
+                aM.GetComponent<AudioManager>().Play("Fail");
                 t = 2;
             }
             

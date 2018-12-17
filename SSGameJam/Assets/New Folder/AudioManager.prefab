@@ -78,13 +78,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Success
     clip: {fileID: 8300000, guid: f5bc3987fb5023044b98620f8dde38a2, type: 3}
-    volume: 0.7
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Fail
     clip: {fileID: 8300000, guid: c20098197e8235f4cacd87c846fb2fd2, type: 3}
-    volume: 0.7
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
