@@ -366,6 +366,10 @@ MonoBehaviour:
   timer: 0
   Instate: 0
   cloud: {fileID: 1551948085017036}
+  audioS: {fileID: 0}
+  saw: 1
+  metal: 0
+  sewing: 0
 --- !u!114 &114718980065164412
 MonoBehaviour:
   m_ObjectHideFlags: 1

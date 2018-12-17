@@ -9,6 +9,8 @@ TagManager:
   - machine
   - col
   - Priz
+  - Anim
+  - AudioM
   layers:
   - Default
   - TransparentFX

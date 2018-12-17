@@ -379,6 +379,10 @@ MonoBehaviour:
   timer: 0
   Instate: 0
   cloud: {fileID: 1909317139996102}
+  audioS: {fileID: 0}
+  saw: 0
+  metal: 1
+  sewing: 0
 --- !u!212 &212120679989053906
 SpriteRenderer:
   m_ObjectHideFlags: 1

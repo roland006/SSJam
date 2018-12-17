@@ -24,14 +24,22 @@ public class machine : MonoBehaviour
     SpriteRenderer cloud_SpriteRenderer;
     public GameObject cloud;
 
+    public GameObject audioM;
+    public AudioManager aM;
+
+    public bool saw;
+    public bool metal;
+    public bool swing;
+
     // Use this for initialization
     void Start()
     {
         cloud_SpriteRenderer = cloud.GetComponent<SpriteRenderer>(); 
         constT = t;
         spawnPosition = spawnPoint.transform.position;
-        
-        
+        audioM = GameObject.FindGameObjectWithTag("AudioM");
+        aM = audioM.GetComponent<AudioManager>();
+
     }
 
     void Update()
@@ -106,6 +114,12 @@ public class machine : MonoBehaviour
             }
             if (id == 3)
             {
+                if (metal)
+                    aM.GetComponent<AudioManager>().Play("Metal");
+                if (swing)
+                    aM.GetComponent<AudioManager>().Play("Swing");
+                if (saw)
+                    aM.GetComponent<AudioManager>().Play("Saw");
                 animator.SetBool("active", false);
                 active = false;
                 Instantiate(objectPrefab[id], spawnPosition, Quaternion.identity);
@@ -120,6 +134,12 @@ public class machine : MonoBehaviour
                 
                 if (id == 2)
                 {
+                    if (metal)
+                        aM.GetComponent<AudioManager>().Play("Metal");
+                    if (swing)
+                        aM.GetComponent<AudioManager>().Play("Swing");
+                    if (saw)
+                        aM.GetComponent<AudioManager>().Play("Saw");
                     Instate = nameForObject[id];
                     id = 3;
                     Debug.Log("id = 3");
@@ -128,6 +148,12 @@ public class machine : MonoBehaviour
 
                 if (id == 1)
                 {
+                    if (metal)
+                        aM.GetComponent<AudioManager>().Play("Metal");
+                    if (swing)
+                        aM.GetComponent<AudioManager>().Play("Swing");
+                    if (saw)
+                        aM.GetComponent<AudioManager>().Play("Saw");
                     id = 2;
                     Instate = nameForObject[id];
                     Debug.Log("id = 2");
@@ -139,6 +165,18 @@ public class machine : MonoBehaviour
                     Instate = nameForObject[id];
                     Debug.Log("id = 1");
                     t = 5;
+                    if (metal)
+                    {
+                        aM.GetComponent<AudioManager>().Play("Metal");
+                    }
+                    if (swing)
+                    {
+                        aM.GetComponent<AudioManager>().Play("Swing");
+                    }
+                    if (saw)
+                    {
+                        aM.GetComponent<AudioManager>().Play("Saw");
+                    }
                 }
             }
         }

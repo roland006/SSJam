@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 movement;
     public GameObject arms;
     public Animator animator;
-
+    public GameObject CraftingMenu;
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +17,16 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            CraftingMenu.SetActive(true);
+        }
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            CraftingMenu.SetActive(false);
+        }
+
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movement = moveInput.normalized * speed;
 
