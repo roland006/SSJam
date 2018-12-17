@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212057058007501568}
   - component: {fileID: 50857168168558184}
   - component: {fileID: 114921270844566032}
-  - component: {fileID: 58476734385632546}
+  - component: {fileID: 70807366766361900}
   m_Layer: 9
   m_Name: 103
   m_TagString: Object
@@ -36,8 +36,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915261755357364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9438614, y: 9.1982355, z: 0.14160156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0741498, y: 9.040876, z: 0.051434882}
   m_LocalScale: {x: 0.5561464, y: 0.56259423, z: 0.12963}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58476734385632546
-CircleCollider2D:
+--- !u!70 &70807366766361900
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,9 +75,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0937532, y: 0.10194607}
-  serializedVersion: 2
-  m_Radius: 0.67951816
+  m_Offset: {x: -0.029897787, y: 0.098515764}
+  m_Size: {x: 1.4923207, y: 0.8906985}
+  m_Direction: 1
 --- !u!114 &114921270844566032
 MonoBehaviour:
   m_ObjectHideFlags: 1
