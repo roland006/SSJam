@@ -15,10 +15,13 @@ public class MagicCraft : MonoBehaviour {
     public Vector3 spawnPosition;
     public GameObject spawnPoint;
     public GameObject[] objectPrefab;
-    public GameObject audioS;
+    public GameObject audioM;
+    public AudioManager aM;
 
     // Use this for initialization
     void Start () {
+        audioM = GameObject.FindGameObjectWithTag("AudioM");
+        aM = audioM.GetComponent<AudioManager>();
         spawnPosition = spawnPoint.transform.position;
         //Создаю массив с айтемами, заполняю его уникальными номерами для дальнейшей идентификации предметов в крафте
         int ResTypes = 3; //Кол-во возможных ресурсов (Дерево, Ткань, Железо)
