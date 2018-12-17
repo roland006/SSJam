@@ -306,6 +306,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\colSBox.cs" />
     <Compile Include="Assets\Script\ColS.cs" />
     <Compile Include="Assets\Script\machine.cs" />
     <Compile Include="Assets\Script\MachineTimer.cs" />

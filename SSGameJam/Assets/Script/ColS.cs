@@ -17,15 +17,24 @@ public class ColS : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        machine.GetComponent<machine>().i = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            machine.GetComponent<machine>().i = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        machine.GetComponent<machine>().i = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            machine.GetComponent<machine>().i = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        machine.GetComponent<machine>().i = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            machine.GetComponent<machine>().i = false;
+        }
     }
 }

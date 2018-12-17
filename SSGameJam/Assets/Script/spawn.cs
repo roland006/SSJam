@@ -7,6 +7,8 @@ public class spawn : MonoBehaviour {
     public GameObject spawnPoint;
     public Vector3 spawnPosition;
     public GameObject[] objectPrefab;
+    public bool colPlayer;
+    public GameObject player;
     public float t;
 
     // Use this for initialization
@@ -16,11 +18,22 @@ public class spawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        t -= Time.deltaTime;
-        if (t < 0)
+
+        if (colPlayer && player.GetComponent<take_an_object>().isCol == false)
         {
-            Instantiate(objectPrefab[Random.Range(0, objectPrefab.Length)], spawnPosition, Quaternion.identity);
-            t = 5;
+            if (Input.GetKeyDown("space"))
+            {
+                Instantiate(objectPrefab[Random.Range(0, objectPrefab.Length)], spawnPosition, Quaternion.identity);
+            }
         }
+
+
+
+       //         t -= Time.deltaTime;
+       // if (t < 0)
+       //{
+       //     Instantiate(objectPrefab[Random.Range(0, objectPrefab.Length)], spawnPosition, Quaternion.identity);
+       //     t = 5;
+       // }
     }
 }
