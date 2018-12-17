@@ -20,10 +20,16 @@ public class machine : MonoBehaviour
 
     float constT;
     public int timer;
+    SpriteRenderer cloud_SpriteRenderer;
+    public GameObject cloud;
+    //float ypos, xpos;
 
     // Use this for initialization
     void Start()
     {
+        // ypos = cloud.transform.position.y;
+        // xpos = cloud.transform.position.x;
+        cloud_SpriteRenderer = cloud.GetComponent<SpriteRenderer>(); 
         constT = t;
         spawnPosition = spawnPoint.transform.position;
         
@@ -128,25 +134,38 @@ public class machine : MonoBehaviour
         
 
             ////////
-        if (t <= constT * 0.2f)
+        if (t <= constT * 0.2f && work == true)
         {
             timer = 0;
+            cloud_SpriteRenderer.sortingOrder = 5;
         }
-        else if (t > constT * 0.2f && t <= constT * 0.4f)
+        else if (t > constT * 0.2f && t <= constT * 0.4f && work == true)
         {
             timer = 1;
+            cloud_SpriteRenderer.sortingOrder = 5;
         }
-        else if (t > constT * 0.4f && t <= constT * 0.6f)
+        else if (t > constT * 0.4f && t <= constT * 0.6f && work == true)
         {
             timer = 2;
+            cloud_SpriteRenderer.sortingOrder = 5;
         }
-        else if (t > constT * 0.6f && t <= constT * 0.8f)
+        else if (t > constT * 0.6f && t <= constT * 0.8f && work == true)
         {
             timer = 3;
+            cloud_SpriteRenderer.sortingOrder = 5;
+
         }
-        else if (t > constT * 0.8f && t <= constT)
+        else if (t > constT * 0.8f && t <= constT && work == true)
         {
             timer = 4;
+            cloud_SpriteRenderer.sortingOrder = 5;
+        }
+        else
+        {
+            //cloud.transform.position = new Vector3(xpos,ypos, -1);
+            cloud_SpriteRenderer.sortingOrder = -10;
+           
+            
         }
     }
 
