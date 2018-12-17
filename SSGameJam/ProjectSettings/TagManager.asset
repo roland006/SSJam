@@ -8,6 +8,7 @@ TagManager:
   - 'ground '
   - machine
   - col
+  - Priz
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - ignor
   - object
-  - 
+  - Priz
   - 
   - 
   - 

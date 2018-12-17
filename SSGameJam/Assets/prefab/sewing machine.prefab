@@ -43,7 +43,7 @@ GameObject:
   m_Layer: 0
   m_Name: Res
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 61466480994077270}
   - component: {fileID: 114915243515066682}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ColwithPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,6 +360,7 @@ MonoBehaviour:
   - {fileID: 1280871530520978, guid: 2d1be8d5676a97949a39105ec12a6443, type: 2}
   - {fileID: 1303046405582068, guid: fb9ea922fa28c3444a184c8b1fb05e62, type: 2}
   - {fileID: 1603568048004766, guid: b82f9224c3e88284b91f20f1ab2aa47f, type: 2}
+  work: 0
   i: 0
   playerCol: {fileID: 0}
   timer: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machine: {fileID: 1098452182217050}
+  animatorSpace: {fileID: 0}
 --- !u!212 &212036807072404890
 SpriteRenderer:
   m_ObjectHideFlags: 1

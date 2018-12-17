@@ -13,6 +13,7 @@ public class TableS : MonoBehaviour {
     public GameObject log;
     public GameObject objectT;
     public GameObject playerS;
+    public GameObject SpawnPriz;
 
     // Use this for initialization
     void Start () {
@@ -47,6 +48,7 @@ public class TableS : MonoBehaviour {
                     {
                         log.GetComponent<QuestLog>().UpdateLog(id);
                         destroy = true;
+                        SpawnPriz.GetComponent<SpawnPriz>().SpawnP();
                     }
                 }
             }

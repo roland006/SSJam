@@ -5,8 +5,9 @@ using UnityEngine;
 public class ColS : MonoBehaviour {
 
     public GameObject machine;
-	// Use this for initialization
-	void Start () {
+    public Animator animatorSpace;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -20,6 +21,10 @@ public class ColS : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             machine.GetComponent<machine>().i = true;
+            if (machine.GetComponent<machine>().work == true)
+                animatorSpace.SetBool("space", true);
+            else
+                animatorSpace.SetBool("space", false);
         }
     }
 
@@ -28,6 +33,10 @@ public class ColS : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             machine.GetComponent<machine>().i = true;
+            if (machine.GetComponent<machine>().work == true)
+                animatorSpace.SetBool("space", true);
+            else
+                animatorSpace.SetBool("space", false);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -35,6 +44,7 @@ public class ColS : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             machine.GetComponent<machine>().i = false;
+            animatorSpace.SetBool("space", false);
         }
     }
 }

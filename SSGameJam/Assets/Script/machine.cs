@@ -14,7 +14,7 @@ public class machine : MonoBehaviour
     public Vector3 spawnPosition;
     public GameObject[] objectPrefab;
     private int id;
-    private bool work;
+    public bool work;
     public bool i;
     public GameObject playerCol;
 
@@ -23,7 +23,6 @@ public class machine : MonoBehaviour
     public int Instate;
     SpriteRenderer cloud_SpriteRenderer;
     public GameObject cloud;
-   
 
     // Use this for initialization
     void Start()
@@ -37,7 +36,7 @@ public class machine : MonoBehaviour
 
     void Update()
     {
-        
+
         if (Input.GetKeyDown("space") && col && !work)
         {
             if (col != null)
