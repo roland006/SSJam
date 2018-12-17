@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Clock : MonoBehaviour {
 
@@ -20,6 +21,10 @@ public class Clock : MonoBehaviour {
     {
         timer -= Time.deltaTime;
 
+        if (timer < -1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         if (timer < 0)
         {
             anim.SetInteger("Hour", 5);

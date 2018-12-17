@@ -11,9 +11,13 @@ public class QuestLog : MonoBehaviour {
     
     public GameObject TextBox;
     public Animator[] anim = new Animator[3];
+    public Animator suckAss;
 
     SpriteRenderer[] Log_SpriteRenderer = new SpriteRenderer[3];   
     public GameObject[] LogSprite = new GameObject[3];
+
+    public float t = 10;
+
 
     // Use this for initialization
     void Start()
@@ -42,8 +46,8 @@ public class QuestLog : MonoBehaviour {
     public void UpdateLog(int complete)
     {
         //выполняем этот метод после того как подарок (complete) оказался в мешке. Если подарок совпадает с квестлогом log[], то мы начисляем очки, если нет, то ничего не происходит.
-       
-        for (int i = 0; i < 3; i++)
+      
+            for (int i = 0; i < 3; i++)
         {
             if (log[i] == complete && complete > 90)
             {
@@ -51,34 +55,45 @@ public class QuestLog : MonoBehaviour {
                 //тут надо проиграть анимацию замены иконки со старой на новую
 
                 Debug.Log("Молодец, ты сделал" + complete + "Получи новую задачу:" + log[i]); //начисялем очки
+                
                 points = points + SuccessPoint;
                 i = 3;
                 Refresh(log[0], log[1], log[2]);
                 TextBox.GetComponent<TextMesh>().text = ""+points;
-                
+                t = -1;
+                suckAss.SetInteger("Finger", 1);
+                t = 2;
             }
             else if( i == 2 && complete > 90)
             {
+                
                 Debug.Log("Сорян, ты сделал не то что требовалось, соси бибу, или что там у тебя..."); // хз чё делаем
                 points = points + FailurePoint;
                 i = 3;
                 TextBox.GetComponent<TextMesh>().text = "" + points;
+                t = -1;
+                suckAss.SetInteger("Finger", 2);
+                t = 2;
             }
             else if (complete <90)
             {
                 Debug.Log("Ты нафига детям это отправляешь? ты что больной?"); // хз чё делаем
-                i = 3; 
+                i = 3;
+                t = -1;
+                suckAss.SetInteger("Finger", 2);
+                t = 2;
             }
             
         }
     }
+    
 
-    // Update is called once per frame
     void Update () {
-        //Это для дебага, просто сделал вид что что то закинул в мешок (public complete вбиваю через Inspector )
-        //if(Input.GetKeyDown(KeyCode.E))
-        //{
-        //    UpdateLog();
-        //}
-	}
+        t -= Time.deltaTime;
+        if (t < 0)
+        {
+            suckAss.SetInteger("Finger", 0);
+
+        }
+    }
 }
