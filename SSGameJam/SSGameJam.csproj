@@ -306,15 +306,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\colSSpawn.cs" />
+    <Compile Include="Assets\DestText.cs" />
     <Compile Include="Assets\F\CreditsMenuF.cs" />
     <Compile Include="Assets\F\EndSceneF.cs" />
     <Compile Include="Assets\F\MainMenuF.cs" />
     <Compile Include="Assets\F\PauseMenuF.cs" />
+    <Compile Include="Assets\New Folder\ABC.cs" />
     <Compile Include="Assets\New Folder\AudioManager.cs" />
     <Compile Include="Assets\New Folder\Sound.cs" />
     <Compile Include="Assets\Script\Clock.cs" />
     <Compile Include="Assets\Script\ColS.cs" />
     <Compile Include="Assets\Script\colSBox.cs" />
+    <Compile Include="Assets\Script\DisplayHighscores.cs" />
+    <Compile Include="Assets\Script\Game.cs" />
+    <Compile Include="Assets\Script\Highscores.cs" />
+    <Compile Include="Assets\Script\InputFieldS.cs" />
     <Compile Include="Assets\Script\machine.cs" />
     <Compile Include="Assets\Script\MachineTimer.cs" />
     <Compile Include="Assets\Script\MagicCraft.cs" />

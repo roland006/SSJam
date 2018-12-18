@@ -6,6 +6,8 @@ public class ColS : MonoBehaviour {
 
     public GameObject machine;
     public Animator animatorSpace;
+    public GameObject destObj;
+    public int q = 4;
     // Use this for initialization
     void Start () {
 		
@@ -13,8 +15,11 @@ public class ColS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (q <= 0)
+        {
+            Destroy(destObj);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,9 +27,18 @@ public class ColS : MonoBehaviour {
         {
             machine.GetComponent<machine>().i = true;
             if (machine.GetComponent<machine>().work == true)
-                animatorSpace.SetBool("space", true);
+            {
+                if (animatorSpace != null)
+                {
+                    animatorSpace.SetBool("space", true);
+                    q -= 1;
+                }
+            }
             else
-                animatorSpace.SetBool("space", false);
+            {
+                if (animatorSpace != null)
+                    animatorSpace.SetBool("space", false);
+            }
         }
     }
 
@@ -34,9 +48,15 @@ public class ColS : MonoBehaviour {
         {
             machine.GetComponent<machine>().i = true;
             if (machine.GetComponent<machine>().work == true)
-                animatorSpace.SetBool("space", true);
+            {
+                if (animatorSpace != null)
+                    animatorSpace.SetBool("space", true);
+            }
             else
-                animatorSpace.SetBool("space", false);
+            {
+                if (animatorSpace != null)
+                    animatorSpace.SetBool("space", false);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -44,7 +64,8 @@ public class ColS : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             machine.GetComponent<machine>().i = false;
-            animatorSpace.SetBool("space", false);
+            if (animatorSpace != null)
+                animatorSpace.SetBool("space", false);
         }
     }
 }

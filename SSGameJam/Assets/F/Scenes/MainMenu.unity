@@ -180,8 +180,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Programming: \nDenis \"malmorsus\" Ruchkin\nMikhail \"Roland006\" Lubyagov\n\nArt
-    Design: \nSaida \"Saya\" Ismailova \nGeorge \"Airetto\" Glazkov\n\nSound Design:
+  m_Text: "Programming: \nDenis \"malmorsus\" Ruchkin\nMikhail \"Roland006\" Lubyagov\n\nArt:
+    \nSaida \"Saya\" Ismailova \nGeorge \"Airetto\" Glazkov\n\nSound Design & UI:
     \nFedor \"Lisad\" Putilov"
 --- !u!222 &98390283
 CanvasRenderer:
@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: -337}
+  m_AnchoredPosition: {x: -0.000022888, y: -292.6}
   m_SizeDelta: {x: 270, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &920947009
@@ -627,7 +627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: 338}
+  m_AnchoredPosition: {x: 518.5, y: 268.1}
   m_SizeDelta: {x: 350, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1288965639
@@ -900,15 +900,15 @@ RectTransform:
   m_GameObject: {fileID: 1586586535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -100}
-  m_LocalScale: {x: 1, y: 1.0422162, z: 1}
+  m_LocalScale: {x: 0.73871, y: 0.7698955, z: 0.73871}
   m_Children: []
   m_Father: {fileID: 1955760476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69, y: 113}
-  m_SizeDelta: {x: 1653.2, y: 836.85}
+  m_AnchoredPosition: {x: 37, y: 103.6}
+  m_SizeDelta: {x: 1147.1, y: 704.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586586537
 MonoBehaviour:
@@ -929,7 +929,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3a0c92e6f4394d846bdde4d043701ffc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cde12a07a58582f4dbe23794bb5d6354, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1170,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -127}
+  m_AnchoredPosition: {x: -0.000030518, y: -96}
   m_SizeDelta: {x: 350, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993204273
@@ -1452,7 +1452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038144, y: -229}
+  m_AnchoredPosition: {x: -0.0000038144, y: -191.29999}
   m_SizeDelta: {x: 480, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2147341630

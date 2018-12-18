@@ -133,7 +133,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1737717344785530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.51, y: -0.78, z: 0.86328125}
+  m_LocalPosition: {x: -10.51, y: 2.42, z: 0.86328125}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 4031530789990144}
@@ -338,6 +338,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machine: {fileID: 1737717344785530}
   animatorSpace: {fileID: 0}
+  destObj: {fileID: 0}
+  q: 4
 --- !u!114 &114650984772033268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,10 +368,11 @@ MonoBehaviour:
   timer: 0
   Instate: 0
   cloud: {fileID: 1551948085017036}
-  audioS: {fileID: 0}
+  audioM: {fileID: 0}
+  aM: {fileID: 0}
   saw: 1
   metal: 0
-  sewing: 0
+  swing: 0
 --- !u!114 &114718980065164412
 MonoBehaviour:
   m_ObjectHideFlags: 1
