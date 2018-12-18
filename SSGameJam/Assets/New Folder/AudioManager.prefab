@@ -54,43 +54,43 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: c1ec934e3f308d24d88f0a8afb898729, type: 3}
-    volume: 1
+    volume: 0.9
     pitch: 1.04
     loop: 1
     source: {fileID: 0}
   - name: Saw
     clip: {fileID: 8300000, guid: c12f21c16b6ec894f8cd03f269d76676, type: 3}
-    volume: 0.7
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Swing
     clip: {fileID: 8300000, guid: 55aa4da5ad1fdf043836bbfe46f39f3a, type: 3}
-    volume: 0.7
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Metal
     clip: {fileID: 8300000, guid: 1601cefe7d2bb394781edbf09e8b7c1c, type: 3}
-    volume: 0.7
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Success
     clip: {fileID: 8300000, guid: f5bc3987fb5023044b98620f8dde38a2, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Fail
     clip: {fileID: 8300000, guid: c20098197e8235f4cacd87c846fb2fd2, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Magic
     clip: {fileID: 8300000, guid: 8991174a00328d54cbf7d846bb746758, type: 3}
-    volume: 0.7
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}

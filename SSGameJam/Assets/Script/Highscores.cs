@@ -19,13 +19,14 @@ const string privateCode = "UCWM8L_nw0u_yBK3jiR-zQqHtHxmHpI0ezFsufWYyIyQ";
 
     public GameObject aabbcc;
 
-
+    public bool qfa;
 
 
 
     private void Start()
     {
         aabbcc = GameObject.FindGameObjectWithTag("ABC");
+        qfa = false;
     }
 
 
@@ -89,9 +90,10 @@ const string privateCode = "UCWM8L_nw0u_yBK3jiR-zQqHtHxmHpI0ezFsufWYyIyQ";
 
    public void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return) && qfa == false)
         {
             EnterName();
+            qfa = true;
         }
     }
 

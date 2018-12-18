@@ -92,6 +92,7 @@ public class QuestLog : MonoBehaviour {
                 aabbcc.GetComponent<ABC>().pointABC = points;
                 Debug.Log("Ты нафига детям это отправляешь? ты что больной?"); // хз чё делаем
                 i = 3;
+                TextBox.GetComponent<TextMesh>().text = "" + points;
                 t = -1;
                 suckAss.SetInteger("Finger", 2);
                 aM.GetComponent<AudioManager>().Play("Fail");
