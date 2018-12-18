@@ -20,6 +20,8 @@ public class QuestLog : MonoBehaviour {
     public GameObject audioM;
     public AudioManager aM;
 
+    public GameObject abc;
+
 
     // Use this for initialization
     void Start()
@@ -61,6 +63,7 @@ public class QuestLog : MonoBehaviour {
                 Debug.Log("Молодец, ты сделал" + complete + "Получи новую задачу:" + log[i]); //начисялем очки
                 
                 points = points + SuccessPoint;
+                abc.GetComponent<ABC>().pointABC = points;
                 i = 3;
                 Refresh(log[0], log[1], log[2]);
                 TextBox.GetComponent<TextMesh>().text = ""+points;
@@ -74,6 +77,7 @@ public class QuestLog : MonoBehaviour {
                 
                 Debug.Log("Сорян, ты сделал не то что требовалось, соси бибу, или что там у тебя..."); // хз чё делаем
                 points = points + FailurePoint;
+                abc.GetComponent<ABC>().pointABC = points;
                 i = 3;
                 TextBox.GetComponent<TextMesh>().text = "" + points;
                 t = -1;
@@ -84,6 +88,7 @@ public class QuestLog : MonoBehaviour {
             else if (complete <90)
             {
                 points = points - 1;
+                abc.GetComponent<ABC>().pointABC = points;
                 Debug.Log("Ты нафига детям это отправляешь? ты что больной?"); // хз чё делаем
                 i = 3;
                 t = -1;
@@ -97,6 +102,7 @@ public class QuestLog : MonoBehaviour {
     
 
     void Update () {
+        
         t -= Time.deltaTime;
         if (t < 0)
         {
